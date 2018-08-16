@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerTokenService", "IdentityServerTokenService\IdentityServerTokenService.csproj", "{F57E7100-566B-4ACF-87BD-24FEA1A31BA4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{14E647A2-D3CE-40FA-B635-66D48008E006}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F57E7100-566B-4ACF-87BD-24FEA1A31BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57E7100-566B-4ACF-87BD-24FEA1A31BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57E7100-566B-4ACF-87BD-24FEA1A31BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57E7100-566B-4ACF-87BD-24FEA1A31BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E647A2-D3CE-40FA-B635-66D48008E006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E647A2-D3CE-40FA-B635-66D48008E006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E647A2-D3CE-40FA-B635-66D48008E006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E647A2-D3CE-40FA-B635-66D48008E006}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C5530A1-7137-455A-87B7-999FA3BB420F}
+	EndGlobalSection
+EndGlobal
