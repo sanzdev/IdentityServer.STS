@@ -1,2 +1,3 @@
-# IdentityServer.STS
-STS Implementation based on ASP.NET Core IdentityServer 4 on Docker
+# IdentityServerTokenService
+
+Secure Token Service Implementation based on ASP.NET Core IdentityServer4 on Docker
