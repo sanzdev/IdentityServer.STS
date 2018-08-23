@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics;
+using System.IO;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using System.Linq;
+using Microsoft.AspNetCore.Hosting.WindowsServices;
 
 namespace IdentityServerTokenService
 {
@@ -18,20 +19,17 @@ namespace IdentityServerTokenService
             }
             else
             {
-                host.Run();
+                host.RunAsService();
             }
         }
 
         public static IWebHost BuildWebHost(string[] args)
         {
-            var config = new ConfigurationBuilder()
-              .AddJsonFile("appsettings.json", false)
-              .Build();
-
-            var hostOptions = config.GetSection("HostOptions");
+            var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
+            var pathToContentRoot = Path.GetDirectoryName(pathToExe);
 
             return WebHost.CreateDefaultBuilder(args)
-              .UseIISIntegration()
+              .UseContentRoot(pathToContentRoot)
               .UseStartup<Startup>()
               .UseApplicationInsights()
               .Build();
