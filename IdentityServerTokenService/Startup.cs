@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using CorrelationId;
 using IdentityServerTokenService.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +19,6 @@ namespace IdentityServerTokenService
         public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
             Configuration = configuration;
-
             _hostingEnvironment = hostingEnvironment;
         }
 
@@ -34,6 +34,7 @@ namespace IdentityServerTokenService
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddCorrelationId();
 
             services.AddIdentityServer(Configuration.GetSection("IdentityServerOptions"))
 
@@ -79,7 +80,7 @@ namespace IdentityServerTokenService
 
             UseForwardedHeaders(app);
             app.UseDeveloperExceptionPage();
-
+            app.UseCorrelationId();
             app.UseIdentityServer();
         }
 
