@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{357F056D-EBEC-458E-97CF-0E5D9772E84E}"
 	ProjectSection(SolutionItems) = preProject
-		Docker\Scripts.txt = Docker\Scripts.txt
+		Resources\Docker\Scripts.txt = Resources\Docker\Scripts.txt
 	EndProjectSection
 EndProject
 Global
